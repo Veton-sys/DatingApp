@@ -22,11 +22,11 @@
                 </div>
                 <div>
                     <strong>Last Active: </strong>
-                    <p>{{member.lastActive}}</p>
+                    <p>{{member.lastActive + 'Z' | timeago}}</p>
                 </div>
                 <div>
-                    <strong>Member since:: </strong>
-                    <p>{{member.created}}</p>
+                    <strong>Member since: </strong>
+                    <p>{{member.created | date: 'dd MMM yyyy'}}</p>
                 </div>
                 <div class="card-footer">
                     <button class="btn btn-success col-12" [disabled]="!editForm.dirty" form="editForm">Save changes</button>
